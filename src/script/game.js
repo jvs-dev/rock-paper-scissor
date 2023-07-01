@@ -120,9 +120,7 @@ function draw() {
     let resultMessage = document.getElementById("resultMessage")
     let result = document.getElementById("result")
     resultMessage.innerHTML = "draw"
-    let youPick = document.getElementById("youPick")
     setTimeout(() => {
-        youPick.classList.add("win")
         let game = document.getElementById("game")
         game.style.gap = "30vw"
         result.style.display = "flex"
