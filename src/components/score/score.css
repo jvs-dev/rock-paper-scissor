@@ -1,0 +1,21 @@
+.header__article {
+    background: var(--white);
+    border-radius: 10px;
+    height: 100%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.score__p {
+    color: var(--Score-Text);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+}
+.score__span {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--Header-Outline);
+}

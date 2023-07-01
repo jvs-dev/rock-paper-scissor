@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/reset.css">
+  <link rel="stylesheet" href="src/components/header/header.css">
+  <link rel="stylesheet" href="src/components/score/score.css">
+  <link rel="stylesheet" href="src/components/title/title.css">
+  <link rel="stylesheet" href="src/components/rock-scissor-paper/rock-scissor-paper.css">
+  <link rel="stylesheet" href="src/components/buttons/button-rules/button-rules.css">
+  <link rel="stylesheet" href="src/components/rules/rules.css">
+  <link rel="stylesheet" href="src/components/section-game/section-game.css">
+  <link rel="stylesheet" href="src/styles/base.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <main id="main">
+    <div class="main__rules-bg" id="rules">
+      <article class="main__rules">
+        <h2 class="rules__h2">Rules</h2>
+        <button type="button" class="rules__close" id="closeRules"><img src="images/icon-close.svg"
+            alt="close"></button>
+
+        <img src="images/image-rules.svg" alt="rules" class="rules__img">
+      </article>
+    </div>
+    <header class="main__header">
+      <h1 class="header__h1">Rock<br>Paper<br>Scissors</h1>
+      <article class="header__article">
+        <p class="score__p">score</p>
+        <span class="score__span" id="score"></span>
+      </article>
+    </header>
+
+    <div class="main__div div--rock-paper-scissors" id="rockPaperScissorsTriangle">
+      <div class="rock-paper-scissors__card card--rock">
+        <div class="rock-paper-scissors__card__img" id="rock"><img src="images/icon-rock.svg" alt="rock"></div>
+      </div>
+      <div class="rock-paper-scissors__card card--paper">
+        <div class="rock-paper-scissors__card__img" id="paper"><img src="images/icon-paper.svg" alt="paper"></div>
+      </div>
+      <div class="rock-paper-scissors__card card--scissor">
+        <div class="rock-paper-scissors__card__img" id="scissors"><img src="images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+    </div>
+    <section class="main__section section--game" id="game">
+      <div class="game__div">
+        <h3 class="game__h3">you picked</h3>
+        <div class="game__select-container" id="youPick">
+        </div>
+      </div>
+      <div class="game__result" id="result">
+        <h2 class="game__h2" id="resultMessage"></h2>
+        <button class="game__button" id="playAgain">Play Again</button>
+      </div>
+      <div class="game__div">
+        <h3 class="game__h3">the house picked</h3>
+        <div class="game__select-container" id="housePick"></div>
+      </div>
+
+    </section>
+    <button type="button" class="main__button button--rules" id="showRules">Rules</button>
+  </main>
+
+  <script src="src/script/rules/rules.js"></script>
+  <script src="src/script/game.js"></script>
+</body>
+
+</html>

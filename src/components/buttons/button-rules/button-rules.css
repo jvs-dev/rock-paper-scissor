@@ -1,0 +1,18 @@
+.button--rules {
+    color: #ffffffe3;
+    background: transparent;
+    border: solid 2px #ffffffe3;
+    text-align: center;
+    margin: 0px;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    align-self: flex-end;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}

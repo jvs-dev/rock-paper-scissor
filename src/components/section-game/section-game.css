@@ -1,0 +1,208 @@
+.section--game {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    gap: 0px;
+    transition: 0.5s;
+}
+
+.section--game.active {
+    opacity: 1;
+}
+
+.game__div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 80px;
+}
+.game__h3 {
+    color: var(--white);
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: 1.9px;
+}
+.game__select-container {
+    background: #16213dd7;
+    width: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game__select-container .card--rock {
+    background: var(--Rock-Gradient);
+}
+
+.game__select-container .card--paper {
+    background: var(--Paper-Gradient);
+}
+
+.game__select-container .card--scissor {
+    background: var(--Scissors-Gradient);
+}
+
+#youPick .rock-paper-scissors__card {
+    padding: 22px;
+    box-shadow: 0px -7px 0px 0px #0000003b inset;
+    transform: translateX(-100vw);
+    transition: 0.5s;
+    cursor: default;
+}
+
+#housePick .rock-paper-scissors__card {
+    padding: 22px;
+    box-shadow: 0px -7px 0px 0px #0000003b inset;
+    transform: translateX(100vw);
+    transition: 0.5s;
+    cursor: default;
+}
+
+#youPick.active .rock-paper-scissors__card {
+    transform: translateX(0px);
+}
+
+#housePick.active .rock-paper-scissors__card {
+    transform: translateX(0px);
+}
+
+#housePick.active .rock-paper-scissors__card::before {
+    content: '';
+    width: 0px;
+    aspect-ratio: 1/1;
+    background: #ffffff15;
+    outline: 0px solid #ffffff06;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+    transition: 0.5s;
+}
+#housePick.active .rock-paper-scissors__card::after {
+    content: '';
+    width: 0px;
+    aspect-ratio: 1/1;
+    background: #ffffff05;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+#housePick.active.win .rock-paper-scissors__card::before {
+    content: '';
+    width: 300px;
+    aspect-ratio: 1/1;
+    background: #ffffff15;
+    outline: 50px solid #ffffff06;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+}
+#housePick.active.win .rock-paper-scissors__card::after {
+    content: '';
+    width: 500px;
+    aspect-ratio: 1/1;
+    background: #ffffff05;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+
+
+#youPick.active .rock-paper-scissors__card::before {
+    content: '';
+    width: 0px;
+    aspect-ratio: 1/1;
+    background: #ffffff15;
+    outline: 0px solid #ffffff06;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+#youPick.active .rock-paper-scissors__card::after {
+    content: '';
+    width: 0px;
+    aspect-ratio: 1/1;
+    background: #ffffff05;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+#youPick.active.win .rock-paper-scissors__card::before {
+    content: '';
+    width: 300px;
+    aspect-ratio: 1/1;
+    background: #ffffff15;
+    outline: 50px solid #ffffff06;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+}
+#youPick.active.win .rock-paper-scissors__card::after {
+    content: '';
+    width: 500px;
+    aspect-ratio: 1/1;
+    background: #ffffff05;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+
+
+.game__select-container .rock-paper-scissors__card__img {
+    width: 170px;
+    height: 170px;
+    box-shadow: 0px 7px 0px 0px #0000003b inset;
+}
+
+.game__select-container .rock-paper-scissors__card__img img {
+    width: 50%;
+}
+
+
+.game__result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(60vh);
+    transition: 0.5s ease;
+    margin-top: 80px;
+}
+.game__h2 {
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+.game__button {
+    background: var(--white);
+    text-transform: uppercase;
+    color: var(--Dark-Text);
+    border-radius: 5px;
+    border: 0px;
+    outline-width: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 40px;
+    cursor: pointer;
+    letter-spacing: 1.8px;
+}
+
+.game__result.active {
+    transform: translateY(0px);
+}
