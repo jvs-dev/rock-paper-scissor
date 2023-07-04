@@ -19,3 +19,13 @@
     font-weight: 700;
     color: var(--Header-Outline);
 }
+
+@media only screen and (max-width: 600px) {
+    .header__article {
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+    .score__span {
+        font-size: 35px;
+    }
+}

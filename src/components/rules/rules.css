@@ -52,3 +52,28 @@
 .rules__img {
     width: 250px;
 }
+
+@media only screen and (max-width: 600px) {
+    .main__rules {
+        padding:  40px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .rules__close {
+        position: unset;
+        margin: 0px;
+        order: 1;
+    }
+    .rules__h2 {
+        position: unset;
+        margin: 0px;
+        font-size: 25px;
+    }
+    .rules__img {
+        width: 100%;
+    }
+}

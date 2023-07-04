@@ -19,12 +19,14 @@
     justify-content: center;
     margin: 0px 80px;
 }
+
 .game__h3 {
     color: var(--white);
     margin-bottom: 80px;
     text-transform: uppercase;
     letter-spacing: 1.9px;
 }
+
 .game__select-container {
     background: #16213dd7;
     width: 150px;
@@ -83,6 +85,7 @@
     z-index: -1;
     transition: 0.5s;
 }
+
 #housePick.active .rock-paper-scissors__card::after {
     content: '';
     width: 0px;
@@ -104,6 +107,7 @@
     border-radius: 100%;
     z-index: -1;
 }
+
 #housePick.active.win .rock-paper-scissors__card::after {
     content: '';
     width: 500px;
@@ -149,6 +153,7 @@
     border-radius: 100%;
     z-index: -1;
 }
+
 #youPick.active.win .rock-paper-scissors__card::after {
     content: '';
     width: 500px;
@@ -182,6 +187,7 @@
     transition: 0.5s ease;
     margin-top: 80px;
 }
+
 .game__h2 {
     color: var(--white);
     text-transform: uppercase;
@@ -189,6 +195,7 @@
     font-size: 50px;
     margin-bottom: 15px;
 }
+
 .game__button {
     background: var(--white);
     text-transform: uppercase;
@@ -205,4 +212,89 @@
 
 .game__result.active {
     transform: translateY(0px);
+}
+
+.section--game.gap {
+    gap: 30vw;
+}
+
+@media only screen and (max-width: 600px) {
+    #youPick .rock-paper-scissors__card {
+        padding: 15px;
+        box-shadow: 0px -7px 0px 0px #0000003b inset;
+        transform: translateX(-100vw);
+        transition: 0.5s;
+        cursor: default;
+    }
+
+    #housePick .rock-paper-scissors__card {
+        padding: 15px;
+    }
+
+    .game__select-container .rock-paper-scissors__card__img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .game__div {
+        margin: 0px 30px;
+    }
+    .game__select-container {
+        width: 110px;
+    }
+    .game__h3 {
+        margin-bottom: 0px;
+        margin-top: 45px;
+        order: 1;
+        font-size: 18px;
+        text-align: center;
+    }
+    .game__result {
+        margin-top: 50vh;
+    }
+    .section--game {
+        margin-top: -20vh;
+    }
+    .section--game.gap {
+        gap: 30px;
+    }
+    #housePick.active.win .rock-paper-scissors__card::before {
+        content: '';
+        width: 180px;
+        aspect-ratio: 1/1;
+        background: #ffffff15;
+        outline: 25px solid #ffffff06;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+    }
+    #housePick.active.win .rock-paper-scissors__card::after {
+        content: '';
+        width: 300px;
+        aspect-ratio: 1/1;
+        background: #ffffff05;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+    }
+    #youPick.active.win .rock-paper-scissors__card::before {
+        content: '';
+        width: 180px;
+        aspect-ratio: 1/1;
+        background: #ffffff15;
+        outline: 25px solid #ffffff06;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+    }
+    
+    #youPick.active.win .rock-paper-scissors__card::after {
+        content: '';
+        width: 300px;
+        aspect-ratio: 1/1;
+        background: #ffffff05;
+        position: absolute;
+        border-radius: 100%;
+        z-index: -1;
+    }
 }

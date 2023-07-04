@@ -76,6 +76,7 @@ function housePick() {
         housePick.innerHTML = `<div class="rock-paper-scissors__card card--rock"><div class="rock-paper-scissors__card__img"><img src="images/icon-rock.svg" alt="rock"></div></div>`
         houseSelect = "rock"
     }
+    compare()
     showHousePick()
 }
 
@@ -88,7 +89,6 @@ function showHousePick() {
     let housePick = document.getElementById("housePick")
     setTimeout(() => {
         housePick.classList.add("active")
-        compare()
     }, 500);
 }
 
@@ -98,21 +98,27 @@ function compare() {
     }
     if (houseSelect == "rock" && youSelect == "scissor") {
         lose()
+        localStorage.score = Number(localStorage.score) - 1
     }
     if (houseSelect == "rock" && youSelect == "paper") {
         win()
+        localStorage.score = Number(localStorage.score) + 1
     }
     if (houseSelect == "scissor" && youSelect == "rock") {
         win()
+        localStorage.score = Number(localStorage.score) + 1
     }
     if (houseSelect == "scissor" && youSelect == "paper") {
         lose()
+        localStorage.score = Number(localStorage.score) - 1
     }
     if (houseSelect == "paper" && youSelect == "rock") {
         lose()
+        localStorage.score = Number(localStorage.score) - 1
     }
     if (houseSelect == "paper" && youSelect == "scissor") {
         win()
+        localStorage.score = Number(localStorage.score) + 1
     }
 }
 
@@ -122,7 +128,7 @@ function draw() {
     resultMessage.innerHTML = "draw"
     setTimeout(() => {
         let game = document.getElementById("game")
-        game.style.gap = "30vw"
+        game.classList.add("gap")
         result.style.display = "flex"
         setTimeout(() => {
             result.classList.add("active")
@@ -138,9 +144,8 @@ function win() {
     setTimeout(() => {
         youPick.classList.add("win")
         let game = document.getElementById("game")
-        game.style.gap = "30vw"
+        game.classList.add("gap")
         result.style.display = "flex"
-        localStorage.score = Number(localStorage.score) + 1
         score.innerHTML = localStorage.score
         setTimeout(() => {
             result.classList.add("active")
@@ -156,9 +161,8 @@ function lose() {
     setTimeout(() => {
         housePick.classList.add("win")
         let game = document.getElementById("game")
-        game.style.gap = "30vw"
+        game.classList.add("gap")
         result.style.display = "flex"
-        localStorage.score = Number(localStorage.score) - 1
         score.innerHTML = localStorage.score
         setTimeout(() => {
             result.classList.add("active")
@@ -188,6 +192,6 @@ playAgain.onclick = function () {
         housePick.innerHTML = ""
         result.style.display = "none"
         game.style.display = "none"
-        game.style.gap = "0px"
+        game.classList.remove("gap")
     }, 500);
 }
