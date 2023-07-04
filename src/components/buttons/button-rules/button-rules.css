@@ -20,5 +20,6 @@
 @media only screen and (max-width: 600px) {
     .button--rules {
         align-self: center;
+        margin-bottom: 40px;
     }
 }
